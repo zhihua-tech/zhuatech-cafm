@@ -9,3 +9,4 @@
 | GET | `/api/admin/work-orders` | 服务工单清单 |
 | GET | `/api/shopfloor/dashboard` | 工程师任务工作台 |
 | POST | `/api/shopfloor/work-orders/{id}/reports` | 提交服务处置结果 |
+| POST | `/api/admin/space-utilization` | 空间利用与节省潜力分析 |

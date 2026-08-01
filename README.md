@@ -62,3 +62,7 @@ docker compose up --build
 [部署说明](deploy/README.md) · [接口文档](docs/api.md) · [数据库说明](docs/database.md) · [贡献指南](CONTRIBUTING.md)
 
 关键词：CAFM 系统源码、园区设施管理、空间管理、设施工单、智慧园区、Java CAFM、Vue 设施管理、知华科技。
+
+## 空间利用优化
+
+新增 `POST /api/admin/space-utilization`，依据平均与峰值使用率、固定工位、共享工位和租赁成本，计算空置工位与年度节省潜力，并给出保留、重平衡或合并空间建议。
