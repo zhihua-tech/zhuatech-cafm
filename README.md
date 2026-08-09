@@ -66,3 +66,7 @@ docker compose up --build
 ## 空间利用优化
 
 新增 `POST /api/admin/space-utilization`，依据平均与峰值使用率、固定工位、共享工位和租赁成本，计算空置工位与年度节省潜力，并给出保留、重平衡或合并空间建议。
+
+## 空间整合决策
+
+新增 `POST /api/cafm/insights/space-consolidation`，结合平均与峰值占用、远程办公比例、区域运营成本和关键区域属性，输出 `KEEP / REVIEW / CONSOLIDATE`，量化可复用工位及年度节省潜力。
