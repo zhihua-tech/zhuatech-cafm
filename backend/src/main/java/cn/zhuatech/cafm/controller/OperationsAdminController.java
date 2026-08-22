@@ -1,3 +1,3 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.cafm.controller; import cn.zhuatech.cafm.common.ApiResponse; import cn.zhuatech.cafm.dto.CafmDto.*; import cn.zhuatech.cafm.service.CafmService; import org.springframework.security.access.prepost.PreAuthorize; import org.springframework.web.bind.annotation.*; import java.util.List;
 @RestController @RequestMapping("/api/admin") @PreAuthorize("hasAnyRole('DOMAIN_OPERATOR','QUALITY','ADMIN')") public class OperationsAdminController {private final CafmService service;public OperationsAdminController(CafmService service){this.service=service;}@GetMapping("/dashboard") public ApiResponse<Dashboard> dashboard(){return ApiResponse.ok(service.adminDashboard());}@GetMapping("/work-orders") public ApiResponse<List<WorkRecordView>> orders(){return ApiResponse.ok(service.workRecords());}}
