@@ -70,3 +70,7 @@ docker compose up --build
 ## 空间整合决策
 
 新增 `POST /api/cafm/insights/space-consolidation`，结合平均与峰值占用、远程办公比例、区域运营成本和关键区域属性，输出 `KEEP / REVIEW / CONSOLIDATE`，量化可复用工位及年度节省潜力。
+
+## 企业级设施工单结案
+
+新增 `POST /api/enterprise/cafm/work-order-closure`，覆盖许可、完工证据、资产履历、安全复核、验收、成本和预防措施，返回 `CLOSE / REVIEW / BLOCKED`。详见 [工单结案说明](docs/ENTERPRISE_WORK_ORDER_CLOSURE.md)。
