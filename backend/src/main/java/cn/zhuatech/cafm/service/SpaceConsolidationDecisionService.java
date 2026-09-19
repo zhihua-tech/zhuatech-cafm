@@ -12,8 +12,14 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SpaceConsolidationDecisionService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request request) {
         BigDecimal averageUtilization = BigDecimal.valueOf(request.averageOccupiedSeats())
             .divide(BigDecimal.valueOf(request.totalSeats()), 4, RoundingMode.HALF_UP);
@@ -35,6 +41,9 @@ public class SpaceConsolidationDecisionService {
             peakUtilization, reusableSeats, annualSavings, decision, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String buildingCode, @NotBlank String zoneCode,
                           @Min(1) int totalSeats, @Min(0) int averageOccupiedSeats,
                           @Min(0) int peakOccupiedSeats,
@@ -42,6 +51,9 @@ public class SpaceConsolidationDecisionService {
                           @DecimalMin("0") @DecimalMax("1") double remoteWorkRate,
                           boolean criticalArea) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String buildingCode, String zoneCode,
                          BigDecimal averageUtilization, BigDecimal peakUtilization,
                          int reusableSeats, BigDecimal potentialAnnualSavings,

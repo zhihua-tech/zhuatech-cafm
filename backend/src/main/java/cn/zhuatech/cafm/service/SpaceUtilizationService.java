@@ -13,8 +13,14 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SpaceUtilizationService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result analyze(Request request) {
         int unusedSeats = Math.max(0, (int) Math.round(request.seats() * (1 - request.averageOccupancyPercent() / 100.0)));
         BigDecimal annualSavings = request.monthlyCost().multiply(BigDecimal.valueOf(1 - request.averageOccupancyPercent() / 100.0))
@@ -28,11 +34,17 @@ public class SpaceUtilizationService {
         return new Result(request.spaceName(), unusedSeats, annualSavings, decision, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String spaceName, @Positive double areaSqm,
                           @Positive int seats,
                           @DecimalMin("0") @DecimalMax("100") double averageOccupancyPercent,
                           @DecimalMin("0") @DecimalMax("100") double peakOccupancyPercent,
                           @DecimalMin("0") BigDecimal monthlyCost, @Min(0) int flexibleSeats) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String spaceName, int unusedSeats, BigDecimal annualSavingsPotential,
                          String decision, List<String> actions) {}
 }

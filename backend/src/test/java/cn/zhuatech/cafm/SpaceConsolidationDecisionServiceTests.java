@@ -8,9 +8,15 @@ import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class SpaceConsolidationDecisionServiceTests {
     private final SpaceConsolidationDecisionService service = new SpaceConsolidationDecisionService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void consolidatesPersistentlyUnderusedZone() {
         var result = service.evaluate(new SpaceConsolidationDecisionService.Request(
@@ -21,6 +27,9 @@ class SpaceConsolidationDecisionServiceTests {
         assertEquals("CONSOLIDATE", result.decision());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void keepsCriticalAreaOpen() {
         var result = service.evaluate(new SpaceConsolidationDecisionService.Request(
