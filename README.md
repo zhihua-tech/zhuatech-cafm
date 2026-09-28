@@ -1,5 +1,7 @@
 # ZhuaTech CAFM：面向真实园区服务现场
 
+[简体中文](README.md) | [English](README.en.md)
+
 空间是否可用、设备是否健康、工单是否按时、员工是否满意——园区运营需要一套共同的事实来源。
 
 ZhuaTech CAFM 是知华科技（上海如静知华信息科技有限公司）提供的园区设施管理社区源码版。了解商业版本和定制服务，请访问[知华科技官网](https://www.zhuatech.cn/)。
