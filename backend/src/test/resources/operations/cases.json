@@ -1,0 +1,48 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "onsiteEmployees": "#80",
+      "peakSeatsNeeded": "#85",
+      "usableDesks": "#90"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "visitors": "11"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "seatShortfall": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "employees": "101"
+    },
+    "expected": {
+      "onsiteEmployees": "#81"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "unavailable": "101"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "employees": "0",
+      "visitors": "0"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  }
+]

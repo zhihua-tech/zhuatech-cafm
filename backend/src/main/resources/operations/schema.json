@@ -1,0 +1,88 @@
+{
+  "slug": "cafm",
+  "title": "工位共享折算与峰值座席缺口",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "employees",
+      "label": "团队人数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "remotePct",
+      "label": "远程办公比例%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    },
+    {
+      "key": "visitors",
+      "label": "访客峰值人数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "desks",
+      "label": "工位总数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "unavailable",
+      "label": "不可用工位",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "onsiteEmployees",
+      "label": "向上折算到岗人数"
+    },
+    {
+      "key": "peakSeatsNeeded",
+      "label": "峰值座席需求"
+    },
+    {
+      "key": "usableDesks",
+      "label": "可用工位"
+    },
+    {
+      "key": "seatShortfall",
+      "label": "工位缺口"
+    }
+  ],
+  "description": "按在岗人数、远程比例、访客峰值及不可用工位计算整数座席需求，避免用平均值掩盖不足；不改变空间分配。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "employees": "100",
+        "remotePct": "20",
+        "visitors": "5",
+        "desks": "100",
+        "unavailable": "10"
+      }
+    ]
+  }
+}
